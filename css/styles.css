@@ -176,10 +176,10 @@ box-shadow: 10px 10px 16px -12px rgba(0,0,0,0.75);
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    -webkit-animation: AnimationName 15s ease infinite;
-    -moz-animation: AnimationName 15s ease infinite;
-    animation: AnimationName 15s ease infinite;
-    background: linear-gradient(270deg, rgb(3, 48, 136), #96a6d8);
+    -webkit-animation: AnimationName 5s ease infinite;
+    -moz-animation: AnimationName 5s ease infinite;
+    animation: AnimationName 5s ease infinite;
+    background: linear-gradient(270deg, #008fff, #ce7bff);
     background-size: 400% 400%;
 }
 .schedule{
@@ -199,6 +199,19 @@ box-shadow: 10px 10px 16px -12px rgba(0,0,0,0.75);
       right: 20px;
       bottom: 20px;
       font-size: 14px;
+    }
+
+    .calloutPlan {
+      background: linear-gradient( rgba(3, 48, 100, 0.7), rgba(3, 48, 100, 0.7) ), url('../img/plan-min.jpg')  no-repeat center center scroll;
+    }
+
+    .calloutWeb {
+      background: linear-gradient( rgba(3, 48, 100, 0.7), rgba(3, 48, 100, 0.7) ), url('../img/web-min.jpeg')  no-repeat center center scroll;
+    }
+
+    .callout {
+      background: linear-gradient(rgba(3, 48, 100, 0.7), rgba(3, 48, 100, 0.7)), url('../img/bg-min.jpg')  no-repeat center center scroll;
+
     }
 }
 
