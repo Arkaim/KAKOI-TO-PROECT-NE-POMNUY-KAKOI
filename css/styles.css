@@ -63,6 +63,16 @@ header .image-responsive {
     color: #fff;
 }
 
+#footer {
+    height: 300px;
+    background-color: whitesmoke;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+#footer #map {
+    height: 300px;
+}
+
 
 /* Custom Button Styles */
 
@@ -307,7 +317,18 @@ hr.small {
     line-height: 400px;
 }
 
-.textContainer h3 {
+.textContainer h3,
+{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.textContainermap {
+    height: 300px;
+    line-height: 300px;
+}
+
+.textContainermap h4 {
     vertical-align: middle;
     display: inline-block;
 }
@@ -634,6 +655,10 @@ video {
         background-color: grey;
         height: auto !important;
         text-align: center;
+    }
+    #header .navbar-brand {
+        padding: 0;
+        margin-left: 15px;
     }
 }
 
