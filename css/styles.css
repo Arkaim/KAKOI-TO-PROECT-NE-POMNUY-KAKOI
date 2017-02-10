@@ -71,6 +71,9 @@ header .image-responsive {
 
 #footer #map {
     height: 300px;
+    background: url(../img/map.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
