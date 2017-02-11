@@ -320,8 +320,13 @@ hr.small {
     line-height: 400px;
 }
 
-.textContainer h3,
-{
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.textContainer {
     vertical-align: middle;
     display: inline-block;
 }
@@ -562,6 +567,16 @@ ul.sub-menu {
     margin: 0;
 }
 
+.owl-carousel {
+    height: 300px;
+}
+
+.owl-theme img {
+    border: 6px solid #266398;
+    border-radius: 3px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
 #header .navbar-nav li ul.sub-menu li a {
     color: #818285;
     padding: 5px 0;
@@ -655,9 +670,10 @@ video {
         display: none;
     }
     .main {
-        background-color: grey;
         height: auto !important;
         text-align: center;
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../img/text.jpg);
+        background-repeat: repeat;
     }
     #header .navbar-brand {
         padding: 0;
