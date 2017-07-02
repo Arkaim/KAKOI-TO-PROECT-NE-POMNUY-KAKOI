@@ -1,0 +1,103 @@
+.wrap2 {
+background-color: white;
+perspective: 800px;
+position: absolute;
+top: 50%;
+left: 50%;
+margin-left: -80px;
+margin-top: -80px;
+z-index: 600001;
+pointer-events: none;
+}
+.boxcube2 {
+position: relative;
+width: 160px;
+-webkit-transform-style: preserve-3d;
+-webkit-transform: translate3d(0,0,0);
+-webkit-transform-origin: 80px 80px 0;
+-webkit-transform-origin: 80px 80px 0;
+-webkit-animation: spin 1.8s infinite ease-in-out;
+}
+.boxcube2 div {
+position: absolute;
+width: 160px;
+height: 160px;
+color: white;
+text-align: center;
+line-height: 80px;
+font-size: 34px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-width: 3px !important;
+border-color: black; 
+}
+.boxfront {
+-webkit-transform: translateZ(80px);
+-webkit-backface-visibility: hidden;
+}
+.boxback {
+-webkit-transform: translateZ(-80px) rotateY(180deg);
+-webkit-backface-visibility: hidden;
+}
+.boxtop {
+-webkit-transform: rotateX(-90deg) translateY(-80px);
+-webkit-transform-origin: top center;
+-webkit-backface-visibility: hidden;
+}
+.boxbottom {
+-webkit-transform: rotateX(90deg) translateY(80px);
+-webkit-transform-origin: bottom center;
+-webkit-backface-visibility: hidden;
+}
+.boxleft {
+-webkit-transform: rotateY(270deg) translateX(-80px);
+-webkit-transform-origin: center left;
+-webkit-backface-visibility: hidden;
+}
+.boxright {
+-webkit-transform: rotateY(-270deg) translateX(80px);
+-webkit-transform-origin: top right;
+-webkit-backface-visibility: hidden;
+}
+.face2 {
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #000;
+opacity: 0.2;
+}
+
+@-webkit-keyframes spin {
+	0% { 
+	-webkit-transform: rotateY(0deg); 
+	}
+	/*50% {
+	-webkit-transform: rotateY(-180deg);
+	}*/
+	50% { 
+	-webkit-transform: rotateY(-360deg);
+	}
+	
+	100% { 
+	-webkit-transform: rotateY(-360deg);
+	}
+}
+
+
+
+
+.preloaderLogo {
+	width: 80%;
+	margin-bottom: 10px;
+}
+
+.preloader {
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	background-color: #FDD835;
+	top: 0;
+	left: 0;
+	z-index: -10000;
+}
