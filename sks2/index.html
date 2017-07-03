@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>hey</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link href="css/style.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="OwlCarousel2-2.2.1/dist/assets/owl.carousel.css"/>
+    <link rel="stylesheet" type="text/css" href="OwlCarousel2-2.2.1/dist/assets/owl.theme.green.css">
+
+
+    <script src='js/jquery.min.js'></script>
+    
+    <script type="text/javascript">
+        jQuery(window).load(function() {
+        jQuery(".preloader").delay(1000).fadeOut("slow");
+    })
+    </script>
+   
+</head>
+
+<body>
+    <img src="logo_white.svg"  class='logo' alt="">
+    <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        
+       
+        <span></span>
+        <span></span>
+        <span></span>
+        
+        
+        <ul id="menu">
+          <a href="#"><li>Главная</li></a>
+          <a href="#"><li>Услуги и товары</li></a>
+          <a href="#"><li>О нас</li></a>
+          <a href="#"><li>Контакты</li></a>
+        </ul>
+      </div>
+    </nav>
+    
+
+
+    <div class="preloader">
+        <div class="wrap2">
+            <div class="boxcube2">
+                <div class="boxfront" style="background-color: #2196F3;">
+                    <img src="logo_white.svg" class="preloaderLogo">
+                </div>
+                <div class="boxback" style="background-color: #2196F3;">☀</div>
+                <div class="boxtop" style="background-color: #2196F3;">☀</div>
+                <div class="boxbottom" style="background-color: #2196F3;">☀</div>
+                <div class="boxleft" style="background-color: #2196F3;"><div class="face2"></div>☀</div>
+                <div class="boxright" style="background-color: #2196F3;"><div class="face2"></div>☀</div>
+            </div>
+        </div>
+    </div>
+
+    
+     
+    <div id="cubeTransition">
+        <div class="page1">
+            <div class="mainText">
+                <h2>Главная</h2>
+                <h5>Lorem ipsum dolor sit.</h5>
+
+            </div>
+            
+        </div>
+
+        <div class="page2">
+            <div><h2>Услуги и товары</h2></div>
+            
+            
+        </div>
+                    
+        
+
+            
+        <div class="page3">
+            <div>
+                <h2>Наши партнеры</h2>
+            </div>
+
+            <div class="owl-carousel loop owl-theme">
+                <div class="item"><img src="img/k_logo.png"></div>
+                <div class="item"><img src="img/k_logo.png"></div>
+                <div class="item"><img src="img/k_logo.png"></div>
+                <div class="item"><img src="img/k_logo.png"></div>
+            </div>
+
+        </div>
+        <div class="page4">
+            <div class="half">
+            <div class="text">
+                <h3>Наши контакты</h3>
+                г.Алматы, ул. Маркова 22/37
+                <a href="tel:+77274368690">+7(727) 346 86 90 </a>
+                <a href="tel:+77007266666">+7(700) 726 66 66 </a>
+                <a href="mailto:too.sks@mail.ru" target="_top">Написать нам: too.sks@mail.ru</a>
+            </div>
+                
+                 
+            </div>
+            <div style="width: 40%; height: 100vh;" id="map"></div>  
+        </div>
+    </div>
+    <ul id="bullets"></ul>
+   
+
+	
+    <script>
+    
+    function animationOut(i) {}
+
+    function animationIn(i) {}
+
+   // makes sure the whole site is loaded
+
+    
+
+    </script>
+
+
+    <script src='js/wheel-indicator.js'></script>
+    <script src="js/jquery.touchSwipe.js"></script>
+    <script src="js/mainCube.js"></script>
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyTvy0bKrJZN4rrkpBNGkpvyXCQ_8g8u4&callback=initMap"
+    async defer></script>
+    <script type="text/javascript" src='js/gmaps.js'></script>
+    <script type="text/javascript" src="OwlCarousel2-2.2.1/dist/owl.carousel.min.js"></script>
+    <script type="text/javascript">
+        $('.loop').owlCarousel({
+            center: true,
+            items:1,
+             autoplay:true,
+            autoplayTimeout:2000,
+            autoplayHoverPause:true,
+            loop:true,
+            margin:10,
+            responsive:{
+                600:{
+                    items:4
+                }
+            }
+        });
+
+       function initMap() {
+
+        var myLatLng = {lat: 43.232042, lng: 76.928009};
+
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: myLatLng,
+          scrollwheel: false,
+          zoom: 16
+        });
+
+         var marker = new google.maps.Marker({
+          map: map,
+          position: myLatLng,
+          title: 'Hello World!'
+        });
+      }
+
+      
+      
+    </script>
+
+
+    
+</body>
+
+</html>
