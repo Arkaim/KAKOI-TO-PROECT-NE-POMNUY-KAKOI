@@ -51,7 +51,7 @@
 		animationOut(current - 1)
 		setTimeout(function() {
 			$('#cubeTransition>div:eq(' + (current - 1) + ')').removeClass('visible');
-		}, 750)
+		}, 700)
 
 		setTimeout(function() {
 			$('#cubeTransition>div:eq(' + (current - 1) + ')').removeClass(outClass);
@@ -66,7 +66,9 @@
 	$(document).ready(
 
 	function() {
-          var indicator = new WheelIndicator({
+    
+    //for scroll by mouse or MAC track pad
+      var indicator = new WheelIndicator({
       callback: function(e){   
           if (e.direction == 'down') {
             trans('down')
@@ -75,7 +77,7 @@
           }
       }
     });
-    indicator.getOption('preventMouse'); 
+    indicator.getOption('preventMouse'); // true
 
 
 		$(document).keydown(function(e) {

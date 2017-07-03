@@ -1,14 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:400,500&subset=cyrillic-ext');
+
 * {
 	margin: 0;
 	padding: 0;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&subset=cyrillic,cyrillic-ext');
 html,body {
 	overflow: hidden;
 	height: 100%;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
 	background-color: #fefefe;
-	font-family: 'Roboto Slab', serif;
 	font-size: 16px;
 	color: #fff;
 	background-color: black;
@@ -24,7 +25,7 @@ html,body {
 	transform-style: preserve-3d;
 }
 	
-#cubeTransition div {
+#cubeTransition .page1, .page2, .page3, .page4  {
 	min-height: 100%;
 	width: 100%;
 	position: absolute;
@@ -36,24 +37,47 @@ html,body {
 	transform: translate3d(0, 0, 0);
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
-	font-size: 5em;
+	font-size: 4em;
 	color: #fff;
 	visibility: hidden;
 	transition:opacity 5ms;
 }
 
+
 #cubeTransition h2 {
 	position: relative;
 	top: 200px;
 	margin: 0;
-	font-size: 1.5em;
+	font-size: 1em;
 	text-align: center;
-	text-shadow: 1px 1px 0px rgba( 0, 0, 0, 0.1 );
+	text-shadow: 2px 2px 8px black; 
+}
+
+.page1 h2 {
+	position: relative;
+	top: 0px !important;
+}
+
+.page1  h5 {
+	font-size: .5em;
+	margin-top: 20px;
+	color: rgba(255,255,255,0.3);
+}
+
+.page1 .mainText {
+	text-align: center;
+	position: relative;
+	top: 50%;
+	transform: translateY(-100%);
 }
 
 .page1 {
 	background: #89b32f;
+	height: 100vh;
+
 }
+
+
 
 .page2 {
 	background: #dc6c5f;
@@ -210,9 +234,10 @@ html,body {
 	display: inline-block;
 	width: 20px;
 	height: 20px;
+	transition: all .5s;
 	border-radius: 50%;
 	margin: 0 3px;
-	background: rgba( 255, 255, 255, 0.5 );
+	background: rgba(255, 218, 0, 0.5);
 	box-shadow: 0px 0px 4px rgba( 0, 0, 0, 0.2 );
 	cursor: pointer;
 	-webkit-tap-highlight-color: rgba( 0, 0, 0, 0 );
@@ -224,23 +249,10 @@ html,body {
 
 #bullets li.active {
 	cursor: default;
-	background: #fff;
+	background: #FFDA00;
 }
 
-.credit {
-	position: absolute;
-	bottom: 24px;
-	right: 24px;
-	margin: 0;
-	z-index: 1;
-	font-size: 0.9em;
-}
 
-.credit a {
-	color: #fff;
-	font-weight: bold;
-	text-decoration: none;
-}
 
 @media screen and (max-width: 500px) {
 	body {
@@ -255,16 +267,8 @@ html,body {
 		margin: 0 6px;
 	}
 
-	.credit {
-		bottom: initial;
-		top: 10px;
-		right: 10px;
-	}
-
-	.share,
-	.github-ribbon {
-		display: none;
-	}
+	
+	
 }
 
 
@@ -376,36 +380,232 @@ opacity: 0.2;
 	position: absolute;
 	background-color: #FDD835;
 	top: 0;
-	display: none;
 	left: 0;
-	z-index: -10000;
+	z-index: 10000;
 }
 
 .page1 {
-	display: flex;
 	justify-content: center;
 	background: url(../img/main.jpg);
 	background-size: cover;
 }
 
 .page2 {
-	display: flex;
 	justify-content: center;
 	background: url(../img/cement1.jpg);
 	background-size: cover;
 }
 .page3 {
-	display: flex;
 	justify-content: center;
 	background: url(../img/tovariuslugi.jpg);
 	background-size: cover;
 }
 
 .page4 {
-	display: flex;
 	justify-content: center;
 	background: url(../img/pesokBlack.jpg);
 	background-size: cover;
 }
 
+
+a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+a:hover
+{
+  color: tomato;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #FFDA00;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  height: 100vh;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: rgba(255,255,255,.8);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's fade it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: scale(1.0, 1.0);
+  opacity: 1;
+}
+
+nav {
+	height: 0px;
+}
+
+
+.logo {
+	position: absolute;
+	bottom: 70px;
+	right: 70px;
+	z-index: 999;
+	width: 20%;
+	height: 20%;
+
+}
+
+.loop {
+	top:300px;
+	width: 50% !important;
+	margin: 0 auto;
+}
+
+.item {
+	background-color: rgba(255,255,255, 1);
+	border-radius: 3px;
+}
+
+#map {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.half {
+	position: relative;
+	width: 60%;
+	left: 0px;
+	height: 100vh;
+	-webkit-transform-style: preserve-3d;
+  	-moz-transform-style: preserve-3d;
+ 	transform-style: preserve-3d;
+	text-align:center;
+}
+
+.half .text {
+	position: relative;
+	top: 50%;
+  	transform: translateY(-50%);
+}
+
+.half a {
+	display: block;
+	color: white;
+	font-size: .5em;
+	position: relative;
+  	
+}
 
