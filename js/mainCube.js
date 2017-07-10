@@ -105,5 +105,9 @@
 			openIndex($(this).index() + 1);
 		});
 
+		$('#menu>li').on('click', function() {
+			openIndex($(this).index() + 1);
+		});
+
 	});
 })(jQuery);

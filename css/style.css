@@ -59,13 +59,16 @@ html,body {
 
 .page1 h2 {
 	position: relative;
-	top: 0px !important;
+	top: 150px !important;
 }
 
 .page1  h5 {
+	top: 200px;
+	position: relative;
 	font-size: .5em;
 	margin-top: 20px;
-	color: rgba(255,255,255,0.3);
+	padding: 50px;
+	color: rgba(255,255,255);
 }
 
 .page1 .mainText {
@@ -411,17 +414,19 @@ opacity: 0.2;
 	background: url(../img/pesokBlack.jpg);
 	background-size: cover;
 }
+a {
+	text-decoration: none;
+}
 
-
-a
+#menu li
 {
   text-decoration: none;
   color: #232323;
-  
+  cursor: pointer;
   transition: color 0.3s ease;
 }
 
-a:hover
+#menu li:hover
 {
   color: tomato;
 }
