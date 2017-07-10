@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:400,500&subset=cyrillic-ext');
 
+
+
 * {
 	margin: 0;
 	padding: 0;
@@ -13,6 +15,8 @@ html,body {
 	font-size: 16px;
 	color: #fff;
 	background-color: black;
+	overflow-y: hidden;
+	overflow-x: hidden;
 }
 
 #cubeTransition {
@@ -625,15 +629,18 @@ nav {
 }
 
 .card1, .card2, .card3 {
-	width: 25%;
 	height: 100%;
 	text-align: center;
 	padding: 15px;
+	color: #FFDA00;
+	transition: color .4s;
+}
+
+.page2 a{
+	width: 25%;
 }
 .card1:hover, .card2:hover, .card3:hover {
-	/*background-size: 120%;*/
-/*	transform: scale(1.1);
-*/	
+	color: white;
 }
 
 
@@ -655,6 +662,56 @@ nav {
 	background-size: cover;
 		background-position: center center;
 
+}
+
+.product__info {
+	width: 100vw;
+	height: 100%;
+}
+
+.cement_modal_photo {
+	background: url('../img/cement1.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 200px;
+	margin-bottom: 20px;
+}
+
+.pesok_modal_photo {
+	background: url('../img/pesokBlack.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 200px;
+	margin-bottom: 20px;
+}
+
+.weben_modal_photo {
+	background: url('../img/sheben.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 200px;
+	margin-bottom: 20px;
+}
+
+
+@media only screen and (max-width : 320px) {
+	.half {
+	position: relative;
+	width: 100%;
+	left: 0px;
+	height: 60%;
+	-webkit-transform-style: preserve-3d;
+  	-moz-transform-style: preserve-3d;
+ 	transform-style: preserve-3d;
+	text-align:center;
+	}
+	#map {
+		width: 100vw;
+		height: 40%;
+	}
 }
 
 

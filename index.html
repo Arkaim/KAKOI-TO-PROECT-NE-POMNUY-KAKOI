@@ -9,8 +9,8 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="OwlCarousel2-2.2.1/dist/assets/owl.carousel.css"/>
     <link rel="stylesheet" type="text/css" href="OwlCarousel2-2.2.1/dist/assets/owl.theme.green.css">
-
-
+    <link rel="stylesheet" type="text/css" href="node_modules/remodal/dist/remodal.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/remodal/dist/remodal-default-theme.css">
     <script src='js/jquery.min.js'></script>
     
     <script type="text/javascript">
@@ -74,16 +74,60 @@
         <div class="page2">
             <div><h2>Услуги и товары</h2></div>
             <div class="cardsDiv">
-                <div class="card1">
-                    <h6>Песок</h6>
-                   
-                </div>
-                <div class="card2">
-                    <h6>Цемент</h6>
-                </div>
-                <div class="card3">
-                    <h6>Щебень</h6>
-                </div>
+                <a id="modal1" href="#pesok">
+                    <div class="card1">
+                        <h6>Битум</h6>
+                    </div>
+                </a>
+                <a id="modal2" href="#cement">
+                    <div class="card2">
+                        <h6>Цемент</h6>
+                    </div>
+                </a>
+                
+                <a id="modal3" href="#weben">
+                   <div class="card3">
+                        <h6>Щебень</h6>
+                    </div>
+                </a>
+                
+            </div>
+
+           <div class="remodal" data-remodal-id="cement">
+              <button data-remodal-action="close" class="remodal-close"></button>
+              <div class="cement_modal_photo"> </div>
+              <h1>Цемент</h1>
+              <p>
+                Высококачественный продукт по доступной цене, обладающий рядом характеристик, которые делают его таковым. Предлагаемый продукт не содержит большое количество примесей, он морозостойкий, не подвержен резким перепадам температуры, и водонепроницаем. 
+              </p>
+              <br>
+              <button data-remodal-action="confirm" class="remodal-confirm">Позвонить</button>
+            </div>
+
+            <div class="remodal" data-remodal-id="pesok">
+              <button data-remodal-action="close" class="remodal-close"></button>
+              <div class="pesok_modal_photo"> </div>
+              <h1>Битум</h1>
+              <p>
+              
+SKS поставляет вязкий и жидкий битум. Мы занимаемся только высококачественными углеводородными соединениями битумов. Помимо этого предлагается высокофункциональный изоляционный материал- битумная мастика. 
+              </p>
+              <br>
+              <button data-remodal-action="confirm" class="remodal-confirm">Позвонить</button>
+            </div>
+
+            <div class="remodal" data-remodal-id="weben">
+              <button data-remodal-action="close" class="remodal-close"></button>
+              <div class="weben_modal_photo"> </div>
+              <h1> Щебень</h1>
+              <p>
+              
+Компания предоставляет продукцию с разной степенью лещадности. Также мы предлагаем щебень как первого класса радиоактивности, так и более низких. 
+
+ 
+              </p>
+              <br>
+              <button data-remodal-action="confirm" href="callto:18475555555" class="remodal-confirm">Позвонить</button>
             </div>
             
         </div>
@@ -98,9 +142,9 @@
 
             <div class="owl-carousel loop owl-theme">
                 <div class="item"><img src="img/k_logo.png"></div>
-                <div class="item"><img src="img/k_logo.png"></div>
-                <div class="item"><img src="img/k_logo.png"></div>
-                <div class="item"><img src="img/k_logo.png"></div>
+                <div class="item"><img src="img/uni_logo.png"></div>
+                <div class="item"><img src="img/dorservice_logo.png"></div>
+                <div class="item"><img src="img/ul_logo.png"></div>
             </div>
 
         </div>
@@ -135,13 +179,14 @@
 
     </script>
 
-
+    <script src="node_modules/remodal/dist/remodal.min.js"></script>
     <script src='js/wheel-indicator.js'></script>
     <script src="js/jquery.touchSwipe.js"></script>
     <script src="js/mainCube.js"></script>
    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyTvy0bKrJZN4rrkpBNGkpvyXCQ_8g8u4&callback=initMap"
     async defer></script>
     <script type="text/javascript" src='js/gmaps.js'></script>
+    <script type="text/javascript" src='node_modules/bootstrap/dist/js/bootstrap.min.js'></script>
     <script type="text/javascript" src="OwlCarousel2-2.2.1/dist/owl.carousel.min.js"></script>
     <script type="text/javascript">
         $('.loop').owlCarousel({
@@ -179,6 +224,9 @@
 
       
       
+    </script>
+    <script>
+      $("#modal1").animatedModal();
     </script>
 
 
